@@ -192,7 +192,7 @@ def weekday(day):
     return weekdays[day]
 
 def hour(datetime):
-    return strftime("%H", localtime(datetime))
+    return strftime("%H", localtime(datetime/1000))
 
 def Tweet(Tweet, config):
     global _index_tweet_status
