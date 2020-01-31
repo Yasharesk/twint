@@ -64,7 +64,7 @@ def update(object, config):
 
     if _type == "tweet":
         Tweet = object
-        day = weekdays[strftime("%A", localtime(Tweet.datetime))]
+        day = weekdays[strftime("%A", localtime(Tweet.datetime/1000))]
         dt = f"{object.datestamp} {object.timestamp}"
         _data = {
             "id": str(Tweet.id),
